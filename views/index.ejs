@@ -1,0 +1,11 @@
+<form method="post" action="/register">
+  <label for="name"></label>
+  <input type="name" name="name" value="<%= name %>">
+  <button>Skrá</button>
+</form>
+
+<ul>
+  <% errors.forEach((error) => { %>
+    <li><%= error.msg %></li>
+  <% }) %>
+</ul>
