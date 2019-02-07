@@ -18,7 +18,7 @@ function catchErrors(fn) {
 }
 
 const validation = [
-  check('name').isLength({ min: 1 }).withMessage('Nafn má ekki vera tómt'),
+  check('nafn').isLength({ min: 1 }).withMessage('Nafn má ekki vera tómt'),
   //check('name').isEmail().withMessage('Netfang verður að vera netfang'),
 ];
 
@@ -33,29 +33,29 @@ const sanitazion = [
 function form(req, res){
   //const {body: {name} = {} } = req;
 
-  res.render('index', {name: '', errors: []});
+  res.render('index', {nafn: '', netfang:'', simi:'', texti:'', starf:'', errors: []});
 }
 
 async function register(req, res){
-  const {body: {name} = {} } = req;
+  const {body: {nafn, netfang, simi, texti, starf} = {} } = req;
   const errors = validationResult(req);
 
   console.log(errors);
   if(!errors.isEmpty()){
     const errorMessages = errors.array();
-    res.render('index', {name, errors: errorMessages});
+    res.render('index', {nafn,netfang,simi,texti,starf, errors: errorMessages});
   }else{
     try{
-      await insert(name);
+      await insert(nafn, netfang, simi, texti, starf);
     }catch(e){
-      console.log('gat ekki búið til nemenda',name,e);
+      console.log('gat ekki búið til nemenda',nafn,netfang,simi,texti,starf,e);
       throw(e);
     }
     res.render('thanks');
   }
 }
 
-router.get('/', catchErrors(form));
-router.post('/register', validation, sanitazion,  catchErrors(register));
+router.get('/', (form));
+router.post('/register', validation, sanitazion,  (register));
 
 module.exports = router;

@@ -1,0 +1,32 @@
+
+
+
+<% appl.forEach((appl) => { %>
+<div class = "umsokn">
+  <div class = "umsokn-nafn">
+    <p><%= appl.nafn %></p>
+  </div>
+  <div class = "umsokn-uppl">
+    <div class = "umsokn-netfang">
+      <p><%= appl.netfang %></p>
+    </div>
+    <div class = "umsokn-simi">
+      <p>Sími: <%= appl.simi %></p>
+    </div>
+    <div class = "umsokn-timi">
+      <p>Umsókn send: <%=  %></p>
+    </div>
+  </div>
+  <div class = "umsokn-texti">
+    <p><%= appl.texti%></p>
+  </div>
+  <div class = "umsokn-takkar">
+    <div class= "button">
+      <button>Vinna umsókn</button>
+    </div>
+    <div class= "button">
+      <button>Eyða umsókn</button>
+    </div>
+  </div>
+</div>
+<% }) %>

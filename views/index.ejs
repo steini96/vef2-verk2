@@ -1,8 +1,31 @@
 <form method="post" action="/register">
-  <label for="name"></label>
-  <input type="name" name="name" value="<%= name %>">
-  <button>Skrá</button>
+  <div class= "uppl-nafn">
+    <label for="name">nafn</label>
+    <input type="name" name="nafn" value="<%= nafn %>">
+  </div>
+  <div class = "uppl-netfang">
+    <label for="netfang">netfang</label>
+    <input type= "netfang" name="netfang" value = <% netfang%>>
+  </div>
+  <div class = "uppl-simi">
+    <label for="simi">sími</label>
+    <input type= "simi" name="simi" value = <% simi%>>
+  </div>
+  <div class = "uppl-texti">
+    <label for="texti">Texti</label>
+    <input type= "texti" name="texti" value = <% texti%>>
+  </div>
+  <div class = "uppl-starf">
+    <label for="starf">Starf</label>
+    <input type= "starf" name="starf" value = <% starf%>>
+  </div>
+
+  <div class= "button">
+    <button>Skrá</button>
+  </div>
+
 </form>
+
 
 <ul>
   <% errors.forEach((error) => { %>
