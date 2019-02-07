@@ -1,6 +1,6 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: 10;
+  margin: 10;
 }
 
 *,
@@ -13,4 +13,30 @@ html {
   box-sizing: border-box;
 }
 
-/* todo útfæra útlit */
+main {
+  /* stylelint-disable-line */
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Open Sans";
+  font-size: 16px; }
+
+.umsokn{
+  display:flex;
+  flex-direction: column;
+
+}
+
+.appli-fyrirsogn{
+  font-size: 1.5em;
+}
+
+.umsokn-takkar{
+  display:flex;
+  flex-direction: row;
+}
+
+
+
+.uppl-nafn{
+  font-size: 2em;
+}
