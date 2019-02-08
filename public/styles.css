@@ -17,9 +17,9 @@ main {
   /* stylelint-disable-line */
   max-width: 1200px;
   margin: 0 auto;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  margin: 50px;
+  margin: 70px;
  }
 
 .umsokn{
@@ -41,9 +41,8 @@ main {
   justify-content: space-between;
 }
 
-.uppl-nafn.p{
-  font-size: 2em;
-  font-weight: bold;
+.uppl *>{
+  width:50%;
 }
 strong{
   font-size: 1.5em;
@@ -51,4 +50,34 @@ strong{
 
 button{
   border-radius: 4px;
+}
+
+.uppl{
+  display:flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.uppl > *{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:45em;
+  margin-bottom: 1em;
+}
+
+.uppl > * > input{
+  width: 35em;
+  border-radius: 4px;
+  margin-right: 5em;
+}
+
+.starf{
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+
+.uppl-texti>input{
+  height:6em;
+  word-wrap: break-word;
 }

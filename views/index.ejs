@@ -1,31 +1,43 @@
+<%- include('header') -%>
+
 <div class = "appli-fyrirsogn">
   <p>Atvinnuumsókn</p>
 </div>
 
 <form method="post" action="/register">
-  <div class= "uppl-nafn">
-    <label for="name">nafn</label>
-    <input type="name" name="nafn" value="<%= nafn %>">
+  <div class= "uppl">
+    <div class= "uppl-nafn">
+      <label for="name">Nafn</label>
+      <input type="text" name="nafn" value="<%= nafn %>">
+    </div>
+    <div class = "uppl-netfang">
+      <label for="netfang">Netfang</label>
+      <input type= "email" name="netfang" value = <% netfang%>>
+    </div>
+    <div class = "uppl-simi">
+      <label for="simi">Sími</label>
+      <input type= "tel" name="simi" value = <% simi%>>
+    </div>
+    <div class = "uppl-texti">
+      <label for="texti">Kynning á þér:</label>
+      <input type= "text" name="texti" value = <% texti%>>
+    </div>
   </div>
-  <div class = "uppl-netfang">
-    <label for="netfang">netfang</label>
-    <input type= "netfang" name="netfang" value = <% netfang%>>
-  </div>
-  <div class = "uppl-simi">
-    <label for="simi">sími</label>
-    <input type= "simi" name="simi" value = <% simi%>>
-  </div>
-  <div class = "uppl-texti">
-    <label for="texti">Texti</label>
-    <input type= "texti" name="texti" value = <% texti%>>
-  </div>
-  <div class = "uppl-starf">
-    <label for="starf">Starf</label>
-    <input type= "starf" name="starf" value = <% starf%>>
+  <strong>Starf sem sótt er um:</strong>
+  <div class="uppl-starf">
+    <div class="starf">
+      <label for="starf"><input type="radio" name="starf" value="forritari">Forritar</label>
+    </div>
+    <div class="starf">
+      <label for="starf"><input type="radio" name="starf" value="honnudur">Hönnuður</label>
+    </div>
+    <div class="starf">
+      <label for="starf"><input type="radio" name="starf" value="verkefnastjori">Verkefnastjóri</label>
+    </div>
   </div>
 
   <div class= "button">
-    <button>Skrá</button>
+    <button>Senda umsókn</button>
   </div>
 
 </form>
@@ -36,3 +48,4 @@
     <li><%= error.msg %></li>
   <% }) %>
 </ul>
+<%- include('footer') -%>

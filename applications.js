@@ -21,6 +21,21 @@ router.get('/applications', async (req,res)=>{
   await client.end();
 });// hér næ ég í úr gagnagrunni
 
+/*
+async function processFunction(req, res) {
+    const idd = req.params.id;
+    await runQuery(UPDATE students SET unnin = true, data = current_timestamp WHERE id = ${idd});
+    return res.redirect('/applications');
+}
 
+async function deleteFunction(req, res) {
+    const idd = req.params.id;
+    await runQuery(DELETE FROM applications WHERE id = ${idd});
+    return res.redirect('/applications');
+}
+
+router.post('/applications/process/:id', catchErrors(processFunction));
+router.post('/applications/delete/:id', catchErrors(deleteFunction));
+*/
 
 module.exports = router;
