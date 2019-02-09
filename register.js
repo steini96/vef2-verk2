@@ -19,7 +19,17 @@ const validation = [
 ];
 
 const sanitazion = [
-
+  /*sanitize('nafn')
+    .trim()
+    .escape(),
+  sanitize('netfang')
+    .normalizeEmail(),
+  sanitize('ssn')
+    .blacklist('-')
+    .toInt(),
+  sanitize('simi'),
+  sanitize('texti'),
+  sanitize('starf')*/
 ];
 
 function form(req, res){
