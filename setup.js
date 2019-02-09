@@ -30,7 +30,7 @@ async function query(q) {
 async function main() {
   console.info(`Set upp gagnagrunn á ${connectionString}`);
   // droppa töflu ef til
-  await query('DROP TABLE IF EXISTS students');
+  await query('DROP TABLE IF EXISTS applications');
   console.info('Töflu eytt');
 
   // búa til töflu út frá skema

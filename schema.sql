@@ -1,4 +1,4 @@
-CREATE TABLE students (
+CREATE TABLE applications (
   id serial primary key,
   nafn varchar(64) not null,
   netfang varchar(64),

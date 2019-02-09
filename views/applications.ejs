@@ -28,7 +28,10 @@
       <button>Vinna umsókn</button>
     </div>
     <div class= "button">
-      <button>Eyða umsókn</button>
+      <form action="/applications/deleteFunction" method="get">
+        <input id="<%= appl.id%>" type="hidden" name="id" value="<%= id%>">
+        <button>Eyða umsókn</button>
+      </form>
     </div>
   </div>
 </div>

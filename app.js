@@ -16,13 +16,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(register);
 app.use(applications);
 
-/* todo aðrar stillingar á express appi */
-
-function notFoundHandler(req, res, next) { // eslint-disable-line
+function notFoundHandler(req, res, next) {
   res.status(404).render('error', { title: '404', error: '404 fannst ekki' });
 }
 
-function errorHandler(error, req, res, next) { // eslint-disable-line
+function errorHandler(error, req, res, next) {
   console.error(error);
   res.status(500).render('error', { title: 'Villa', error });
 }

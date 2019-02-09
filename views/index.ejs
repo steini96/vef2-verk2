@@ -1,5 +1,6 @@
 <%- include('header') -%>
 
+<div class="content">
 <div class = "appli-fyrirsogn">
   <p>Atvinnuumsókn</p>
 </div>
@@ -20,7 +21,7 @@
     </div>
     <div class = "uppl-texti">
       <label for="texti">Kynning á þér:</label>
-      <input type= "text" name="texti" value = <% texti%>>
+      <textarea rows="8" cols="80" type= "textarea" name="texti" value = <% texti%>></textarea>
     </div>
   </div>
   <strong>Starf sem sótt er um:</strong>
@@ -48,4 +49,7 @@
     <li><%= error.msg %></li>
   <% }) %>
 </ul>
+
+</div>
+
 <%- include('footer') -%>

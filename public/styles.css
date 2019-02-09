@@ -13,13 +13,17 @@ html {
   box-sizing: border-box;
 }
 
+.content{
+  display:block;
+  padding: 70px;
+}
+
 main {
   /* stylelint-disable-line */
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  margin: 70px;
  }
 
 .umsokn{
@@ -52,11 +56,18 @@ button{
   border-radius: 4px;
 }
 
+.button:hover button{
+  transition: #bbb 300ms ease-in;
+}
+
 .uppl{
   display:flex;
   flex-direction: column;
   width: 50%;
-}
+}@media (max-width: 600px) {
+    .uppl > * {
+      display: flex;
+      flex-direction: column;} }
 
 .uppl > *{
   display:flex;
@@ -70,6 +81,14 @@ button{
   width: 35em;
   border-radius: 4px;
   margin-right: 5em;
+  border: 2px solid #888;
+}
+
+.uppl > * > textarea{
+  width: 35em;
+  border-radius: 4px;
+  margin-right: 5em;
+  border: 2px solid #888;
 }
 
 .starf{
